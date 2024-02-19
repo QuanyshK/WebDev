@@ -128,3 +128,50 @@ body {
     text-align: center;
     margin-top: 60px;
 }
+.facebook_footer{
+    padding-top: 200px;
+}
+.footer_container{
+    color:#737373 ;
+    font-family: inherit;
+    margin: 0 auto;
+    width: 980px;
+}
+.footer_langs{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    align-items: center;
+    width: auto;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 16.08px;
+    grid-gap:10px;
+}
+.footer_borderline{
+    width: inherit;
+}
+.footer_items{
+    display: flex;
+    flex-wrap: wrap;
+    height: 76.8px;
+}
+.footer_facebook_items{
+    width: 980px;
+    position: static;
+}
+.meta_corp_end{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    font-family: inherit;
+}
+.lastcont {
+    width: inherit;
+    height: 450px;
+    background-color: #fffdfd;
+}

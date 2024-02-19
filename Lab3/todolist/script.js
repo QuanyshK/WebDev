@@ -1,29 +1,28 @@
-const todoList = document.getElementById('list');
-const newItemInput = document.getElementById('input');
-const addItemButton = document.getElementById('button');
-let todoItems = [];
-function renderTodoList() {
-  todoList.innerHTML = '';
-  todoItems.forEach((item, index) => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('item');
-    if (item.completed) {
-      listItem.classList.add('completed');
-    }
+const inputBox = document.getElementById("input");
+const addBtn = document.getElementById("button");
+const list = document.getElementById("list");
+function updateItemCompletion(checkbox) {
+  const listItem = checkbox.parentElement;
+  if (checkbox.checked) {
+    listItem.classList.add("completed");  saveData();
+  } else {
+    listItem.classList.remove("completed");
+  }
+  saveData();
+}
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
+addBtn.addEventListener("click", () => {
+  const newItemText = inputBox.value; 
+  if (newItemText) {
+    const listItem = document.createElement("li");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.addEventListener("change", () => updateItemCompletion(checkbox));
 
-    checkbox.checked = item.completed;
-    checkbox.addEventListener('change', () => {
-      item.completed = checkbox.checked;
-      localStorage.setItem('todoList', JSON.stringify(todoItems));
-      listItem.classList.toggle('completed');
-    });
-
-    const text = document.createElement('span');
-    text.textContent = item.text;
-
+    listItem.appendChild(checkbox);
+    const textSpan = document.createElement("span");
+    textSpan.textContent = newItemText;
+    listItem.appendChild(textSpan);
     const deleteButton = document.createElement('button');
     deleteButton.style.margin = '10px';
     deleteButton.style.fontSize = '20px';
@@ -32,29 +31,22 @@ function renderTodoList() {
     const trashIcon = document.createElement('i');
     trashIcon.classList.add('fa-solid', 'fa-trash');
     deleteButton.appendChild(trashIcon);
-    deleteButton.addEventListener('click', () => {
-      todoItems.splice(index, 1);
-      localStorage.setItem('todoList', JSON.stringify(todoItems));
-      renderTodoList();
+    saveData();
+    deleteButton.addEventListener("click", () => {
+      listItem.remove();
+      saveData();
     });
-
-    listItem.appendChild(checkbox);
-    listItem.appendChild(text);
     listItem.appendChild(deleteButton);
-    todoList.appendChild(listItem);
-  });
-}
-
-addItemButton.addEventListener('click', () => {
-  const newItemText = newItemInput.value.trim();
-  if (newItemText) {
-    const newItem = {
-      text: newItemText,
-      completed: false
-    };
-    todoItems.push(newItem);
-    localStorage.setItem('todoList', JSON.stringify(todoItems));
-    renderTodoList();
-    newItemInput.value = '';
+    list.appendChild(listItem);
+    inputBox.value = "";
+    saveData();
   }
-});
+})
+function saveData(){
+  localStorage.setItem("data",list.innerHTML);
+}
+function showData(){
+  list.innerHTML=localStorage.getItem("data");
+
+}
+showData();

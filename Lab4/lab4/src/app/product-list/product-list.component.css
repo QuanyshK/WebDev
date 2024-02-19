@@ -6,11 +6,10 @@
 }
 
 .product-card {
-  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   margin: 16px 8px;
-  width: calc(33.33% - 20px);
+  width: calc(40% - 20px);
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

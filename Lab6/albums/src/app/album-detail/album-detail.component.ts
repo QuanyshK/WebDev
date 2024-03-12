@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from '../album';
 import { ActivatedRoute } from '@angular/router';
-import { AlbumService } from '../album.service';
+import { AlbumsService } from '../albums.service';
 
 @Component({
-  selector: 'app-album-details',
-  templateUrl: './album-details.component.html',
-  styleUrl: './album-details.component.css'
+  selector: 'app-album-detail',
+  templateUrl: './album-detail.component.html',
+  styleUrl: './album-detail.component.css'
 })
-export class AlbumDetailsComponent implements OnInit {
+export class AlbumDetailComponent implements OnInit {
   album!: Album;
   title: string = '';
 
-  constructor(private route: ActivatedRoute, private albumService: AlbumService){}
+  constructor(private route: ActivatedRoute, private albumService: AlbumsService){}
 
   ngOnInit(){
     this.route.paramMap.subscribe(params => {
@@ -22,7 +22,7 @@ export class AlbumDetailsComponent implements OnInit {
           this.album = album;
         })
       }
-
+      
     })
   }
 

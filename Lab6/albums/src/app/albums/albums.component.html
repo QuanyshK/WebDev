@@ -1,8 +1,8 @@
 <div class="albums-container">
-  <h1>Albums</h1>
-  <div *ngFor = "let album of albums" class="album-item">
-    <a [routerLink]="['/albums', album.id]">{{album.id}}</a>
-    <p>{{album.title}}</p>
-    <div (click)="deleteAlbum(album.id)" class="delete">Delete</div>
+    <h1>Albums</h1>
+    <div *ngFor="let album of albums" class="album-item">
+
+      <div>{{album.id}}</div><a [routerLink]="['/albums', album.id]">{{album.title}}</a>
+      <div (click)="deleteAlbum(album.id)" class="delete-link">Delete</div>
+    </div>
   </div>
-</div>

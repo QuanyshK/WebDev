@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Photos } from '../album';
+import { Images } from '../album';
 import { ActivatedRoute } from '@angular/router';
-import { AlbumService } from '../album.service';
+import { AlbumsService } from '../albums.service';
 
 @Component({
   selector: 'app-album-photos',
@@ -9,15 +9,15 @@ import { AlbumService } from '../album.service';
   styleUrl: './album-photos.component.css'
 })
 export class AlbumPhotosComponent implements OnInit {
-  images!: Photos[];
+  images!: Images[];
 
-  constructor(private route: ActivatedRoute, private albumService: AlbumService){}
-
+  constructor(private route: ActivatedRoute, private albumService: AlbumsService){}
+  
   ngOnInit(){
     this.route.paramMap.subscribe(params => {
       if(params.get('id')){
         const id = Number(params.get('id'));
-        this.albumService.getPhotos(id).subscribe(photos => {
+        this.albumService.getImages(id).subscribe(photos => {
           this.images = photos;
         })
       }

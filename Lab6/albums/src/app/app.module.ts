@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 
@@ -17,7 +17,7 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
     HomeComponent,
     AboutComponent,
     AlbumsComponent,
-    AlbumDetailsComponent,
+    AlbumDetailComponent,
     AlbumPhotosComponent,
   ],
   imports: [
@@ -29,7 +29,7 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'albums', component: AlbumsComponent },
-      { path: 'albums/:id', component: AlbumDetailsComponent },
+      { path: 'albums/:id', component: AlbumDetailComponent },
       { path: 'albums/:id/photos', component: AlbumPhotosComponent }
     ])
   ],

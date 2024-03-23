@@ -1,3 +1,5 @@
+import {Product} from "./products";
+
 export interface Category {
   id: number;
   name: string;
@@ -7,6 +9,7 @@ export const categories = [
   {
     id: 1,
     name: 'Phones',
+
   },
   {
     id: 2,
@@ -21,3 +24,6 @@ export const categories = [
     name: 'Other',
   },
 ];
+
+export class CategoryService {
+}

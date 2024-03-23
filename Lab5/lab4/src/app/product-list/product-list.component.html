@@ -1,11 +1,8 @@
-<div class="search-bar">
-  <label for="search">Search by Product Name:</label>
-  <input type="text" id="search" [(ngModel)]="searchInput" />
-</div>
+
 <app-view-categories></app-view-categories>
 <div class="product-container">
   <div *ngFor="let product of filteredProducts" class="product-card">
-    <div *ngFor="let image of product.img; let i = index">
+    <div *ngFor="let image of product.img">
       <img
         [src]="image"
         [alt]="product.name"
@@ -40,7 +37,7 @@
       </app-product-alerts>
     </div>
     <button class="likebtn" type="button" (click)="like(product)">
-      I like this!: {{ product.likes }}
+      I like: {{ product.likes }}
     </button>
     <button type="button" class="deletebtn" (click)="delete(product)">
       Delete

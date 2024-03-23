@@ -1,0 +1,29 @@
+.back-button{
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+}
+
+button{
+  border-radius: 6px;
+  padding: 5px;
+}
+button:hover{
+  background-color: white;
+  color: black;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:visited{
+  color: darkslateblue;
+}
+*{
+  font-family: Consolas, fantasy;
+}

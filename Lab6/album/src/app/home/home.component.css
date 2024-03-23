@@ -1,0 +1,29 @@
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 40px;
+  padding-top: 20px;
+
+}
+a{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  padding: 5px
+}
+a:hover{
+  color: black;
+  background-color: white;
+}
+div{
+  width: 50%;
+  height: 60px;
+  background-color: lightblue;
+  text-align: center;
+  border-radius: 6px;
+  justify-self: center;
+  margin-left: 25%;
+}
+

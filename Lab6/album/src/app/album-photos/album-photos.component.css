@@ -1,0 +1,12 @@
+img{
+  width: 300px;
+  height: 300px;
+}
+
+.net{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+

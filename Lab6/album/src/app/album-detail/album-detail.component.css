@@ -1,0 +1,51 @@
+.change-button{
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  width: 50%;
+  margin-left: 25%;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+input{
+  border-width: 1px;
+  border-color: green;
+  border-radius: 6px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.link{
+  margin-top: 20px;
+}
+h2,h3{
+  color: darkslateblue;
+  font-weight: normal;
+}
+a{
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+
+}
+a:hover{
+  background-color: white;
+  color: black;
+}
+
+
+

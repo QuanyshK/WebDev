@@ -1,0 +1,12 @@
+div{
+  display: flex;
+  flex-direction: column;
+}
+
+li{
+  background-color: lightblue;
+  margin: 5px;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 6px;
+}

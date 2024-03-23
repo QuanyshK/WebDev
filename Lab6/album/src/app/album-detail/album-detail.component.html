@@ -1,0 +1,16 @@
+<div class="main">
+  <button class="back-button" type="button"
+          routerLink="/albums">Back</button>
+  <div class="info" *ngIf="loaded">
+    <h2>Album # {{album.id}}</h2>
+    <h3>Album title: {{album.title}}</h3>
+    <div class="title">
+      <input type="text" placeholder="Change album's title" #change>
+      <button class="change-button" type="button" (click)="changeTitle(change.value)">Change</button>
+    </div>
+    <div class="link"><a routerLink="/albums/{{album.id}}/photos">Photos</a></div>
+  </div>
+  <div *ngIf="!loaded">
+    <h2>Loading Page...</h2>
+  </div>
+</div>

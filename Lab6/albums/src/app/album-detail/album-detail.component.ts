@@ -12,6 +12,7 @@ export class AlbumDetailComponent implements OnInit {
   album!: Album;
   title: string = '';
 
+
   constructor(private route: ActivatedRoute, private albumService: AlbumsService){}
 
   ngOnInit(){
@@ -22,11 +23,11 @@ export class AlbumDetailComponent implements OnInit {
           this.album = album;
         })
       }
-      
+
     })
   }
 
   saveTitle(){
-    this.album.title = this.title;
+      this.album.title = this.title;
   }
 }

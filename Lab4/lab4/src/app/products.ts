@@ -14,7 +14,7 @@ export const products = [
     id: 1,
     img: ["https://resources.cdn-kaspi.kz/img/m/p/hfc/h07/84326675808286.jpg?format=gallery-medium"],
     name: 'Smartphone Google Pixel 8 8 GB/128 GB gray',
-    price: 290000,
+    price: 0,
     description: 'nFC technology: Yes\n' +
         'color: gray\n' +
         'screen type: OLED, Gorilla Glass Victus\n' +

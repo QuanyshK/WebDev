@@ -1,6 +1,6 @@
 
 <div class="product-container">
-  <div *ngFor="let product of filteredProducts" class="product-card">
+  <div *ngFor="let product of products" class="product-card">
     <div *ngFor="let image of product.img; let i = index">
       <img
         [src]="image"
@@ -10,7 +10,8 @@
     <h3>
       <a
         [title]="product.name + ' details'"
-        [href]="product.link"
+        (click)="sharekaspi(product.link)"
+
       >
         {{ product.name }}
       </a>

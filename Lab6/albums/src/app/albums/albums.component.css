@@ -46,3 +46,7 @@
 .album-item a:hover {
     text-decoration: underline;
 }
+.create {
+  text-align: center;
+  padding: 10px;
+}

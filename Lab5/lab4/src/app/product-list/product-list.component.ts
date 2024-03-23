@@ -8,11 +8,16 @@ import { Product, products } from '../products';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
+  likedBoolean: boolean = false
+  likes: number = 0
+
+
   products: Product[] = products;
   searchInput: string = '';
 
   constructor(
     private route: ActivatedRoute,
+
   ) {}
   ngOnInit() {
 
@@ -36,8 +41,17 @@ export class ProductListComponent implements OnInit {
     window.location.href = telegramLink;
   }
 
-  like(product: Product) {
-    product.likes++;
+  like(product:Product) {
+    if(!this.likedBoolean ) {
+      this.likedBoolean =  true
+      this.likes++
+    }
+    else {
+      this.likedBoolean = false
+      this.likes--
+    }
+    product.likes = this.likes
+
   }
 
   onNotify() {
